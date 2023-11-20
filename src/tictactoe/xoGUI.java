@@ -11,7 +11,7 @@ public class xoGUI extends JFrame {
     private String currentPlayer;
 
     public xoGUI() {
-        setTitle("Tic-Tac-Toe");
+        setTitle("XO");
         setSize(300, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -24,10 +24,18 @@ public class xoGUI extends JFrame {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 buttons[i][j] = new JButton("");
-                buttons[i][j].setFont(new Font("Arial", Font.PLAIN, 40));
+                buttons[i][j].setFont(new Font("verdana", Font.PLAIN, 40));
                 buttons[i][j].setFocusPainted(false);
+
+                // Set the background and foreground colors
+                buttons[i][j].setBackground(Color.LIGHT_GRAY);
+                buttons[i][j].setForeground(Color.BLACK);
+
+
                 buttons[i][j].addActionListener(new ButtonClickListener());
                 panel.add(buttons[i][j]);
+
+
             }
         }
 
