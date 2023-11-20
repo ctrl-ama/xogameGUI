@@ -16,7 +16,9 @@ public class xoGUI extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel panel = new JPanel();
+        panel.setBackground(Color.yellow);
         panel.setLayout(new GridLayout(3, 3));
+
 
         buttons = new JButton[3][3];
         currentPlayer = "X";
